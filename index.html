@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Batalha Pokémon</title>
+</head>
+<body>
+
+    <main>
+        <h1>Batalha Pokémon</h1>
+
+        <section>
+            <h2>Instruções</h2>
+            <p>Cada jogador deve escolher dois Pokémon.</p>
+            <p>Vence quem tiver a maior soma dos pontos.</p>
+        </section>
+
+        <button id="btn-jogar">
+            Jogar
+        </button>
+    </main>
+
+    <script>
+        document.getElementById("btn-jogar")
+            .addEventListener("click", () => {
+                window.location.href = "selecao.html";
+            });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha seus Pokémon</title>
+</head>
+<body>
+
+<main>
+    <h1>Escolha seus Pokémon</h1>
+
+    <!-- Jogador 1 -->
+    <section>
+        <h2>Jogador 1</h2>
+
+        <form id="form-j1">
+            <input type="text" id="j1-pokemon1" placeholder="Primeiro Pokémon" required>
+            <input type="text" id="j1-pokemon2" placeholder="Segundo Pokémon" required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div id="erro-j1"></div>
+        <div id="resultado-j1"></div>
+    </section>
+
+    <hr>
+
+    <!-- Jogador 2 -->
+    <section>
+        <h2>Jogador 2</h2>
+
+        <form id="form-j2">
+            <input type="text" id="j2-pokemon1" placeholder="Primeiro Pokémon" required>
+            <input type="text" id="j2-pokemon2" placeholder="Segundo Pokémon" required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div id="erro-j2"></div>
+        <div id="resultado-j2"></div>
+    </section>
+
+    <br>
+
+    <button id="btn-batalhar" style="display: none;">
+        Batalhar
+    </button>
+</main>
+
+</body>
+</html>
