@@ -1,0 +1,128 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* FUNDO */
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../img/imagem de fundo pokeFront.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+
+/* TITULO */
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow:
+     3px 3px 0 #000,
+     0px 0px 15px rgba(0,0,0,0.7);
+}
+
+#vs {
+    width: 140px;
+    margin: 20px 0;
+}
+
+
+/* NUVEM/CARD  */
+
+section {
+
+background: linear-gradient( 
+        to bottom,
+        rgba(70, 80, 110, 0.85),
+        rgba(40, 50, 80, 0.9)
+    );
+    padding: 40px;
+    border-radius: 20px; 
+    color: #e8ecff; 
+    border: 4px solid #e6c15a; 
+    box-shadow: 
+        0 0 0 4px rgba(255,255,255,0.15) inset,
+        0 8px 25px rgba(0,0,0,0.6);
+
+    width: 600px; 
+    padding: 20px 25px;      
+}
+
+
+
+/* SUBTITULO */
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); 
+}
+
+/* TEXTO */
+
+p {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: white;
+}
+
+/* BOTÃO */
+
+#btn-jogar {
+
+    margin-top: 30px;
+    padding: 10px 55px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 14px;
+    border: 4px solid #e6c15a;
+    color: #ffffff;
+    cursor: pointer;
+
+    background: linear-gradient(to bottom, #6ec6ff, #1565c0);
+
+    box-shadow:
+    0 5px 0 #0d47a1,
+    inset 0 2px 4px rgba(255,255,255,0.5);
+
+}
+
+/* HOVER */
+
+#btn-jogar:hover {
+
+    transform: translateY(-2px);
+    background: linear-gradient(
+        to bottom, #90d4ff, #1976d2);
+}
+
+
+/* CLICK */
+
+#btn-jogar:active {
+
+    transform: translateY(3px);
+    box-shadow:
+        0 2px 0 #0d47a1,
+        inset 0 2px 4px rgba(0,0,0,0.4);
+}
