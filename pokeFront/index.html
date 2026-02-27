@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Batalha Pokémon</title>
+
+    <!-- Mantive seus CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/selecao.css" />
+    <link rel="stylesheet" href="CSS/batalha.css" />
+    <link rel="stylesheet" href="CSS/resultado.css" />
+  </head>
+  <body>
+    <main>
+      <!-- ================= INÍCIO ================= -->
+      <section id="tela-inicio">
+        <h1>Batalha Pokémon</h1>
+        <img id="vs" src="img/vs_png_by_divoras_dehetv9.png" alt="" />
+
+        <section class="card-instrucoes">
+          <h2>Instruções</h2>
+          <p>Cada jogador deve escolher dois Pokémon.</p>
+          <p>Vence quem tiver a maior soma dos pontos.</p>
+        </section>
+
+        <button id="btn-jogar">Jogar</button>
+      </section>
+
+      <!-- ================= SELEÇÃO ================= -->
+      <section id="tela-selecao" style="display: none">
+        <h1>Escolha seus Pokémon</h1>
+
+        <section>
+          <h2>Jogador 1</h2>
+
+          <form id="form-j1">
+            <input
+              type="text"
+              id="j1-pokemon1"
+              placeholder="Primeiro Pokémon"
+              required
+            />
+            <input
+              type="text"
+              id="j1-pokemon2"
+              placeholder="Segundo Pokémon"
+              required
+            />
+            <button type="submit">Buscar</button>
+          </form>
+
+          <div id="erro-j1"></div>
+          <div id="resultado-j1"></div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Jogador 2</h2>
+
+          <form id="form-j2">
+            <input
+              type="text"
+              id="j2-pokemon1"
+              placeholder="Primeiro Pokémon"
+              required
+            />
+            <input
+              type="text"
+              id="j2-pokemon2"
+              placeholder="Segundo Pokémon"
+              required
+            />
+            <button type="submit">Buscar</button>
+          </form>
+
+          <div id="erro-j2"></div>
+          <div id="resultado-j2"></div>
+        </section>
+
+        <br />
+
+        <button id="btn-batalhar" style="display: none">Batalhar</button>
+      </section>
+
+      <!-- ================= BATALHA ================= -->
+      <section id="tela-batalha" style="display: none">
+        <h1>Batalha</h1>
+
+        <section id="area-j1">
+          <h2>Jogador 1</h2>
+          <div id="pokemon-j1-a"></div>
+          <div id="pokemon-j1-b"></div>
+        </section>
+
+        <section id="area-j2">
+          <h2>Jogador 2</h2>
+          <div id="pokemon-j2-a"></div>
+          <div id="pokemon-j2-b"></div>
+        </section>
+
+        <button id="btn-calcular">Confirmar Batalha</button>
+      </section>
+
+      <!-- ================= RESULTADO ================= -->
+      <section id="tela-resultado" style="display: none">
+        <h1>Resultado da Batalha</h1>
+
+        <section>
+          <h2 id="mensagem-resultado"></h2>
+
+          <p>Jogador 1: <span id="pontos-j1"></span></p>
+          <p>Jogador 2: <span id="pontos-j2"></span></p>
+        </section>
+
+        <button id="btn-reiniciar">Jogar Novamente</button>
+      </section>
+    </main>
+
+    <script src="./JS/selecao.js"></script>
+
+    <script>
+      // ================= TROCA DE TELAS =================
+
+      const telas = {
+        inicio: document.getElementById("tela-inicio"),
+        selecao: document.getElementById("tela-selecao"),
+        batalha: document.getElementById("tela-batalha"),
+        resultado: document.getElementById("tela-resultado"),
+      };
+
+      function mostrarTela(nome) {
+        Object.values(telas).forEach((tela) => {
+          tela.style.display = "none";
+        });
+
+        telas[nome].style.display = "block";
+      }
+
+      // Botão jogar
+      document.getElementById("btn-jogar").addEventListener("click", () => {
+        mostrarTela("selecao");
+      });
+
+      // Botão batalhar
+      document.getElementById("btn-batalhar").addEventListener("click", () => {
+        mostrarTela("batalha");
+      });
+
+      // Botão calcular
+      document.getElementById("btn-calcular").addEventListener("click", () => {
+        mostrarTela("resultado");
+      });
+
+      // Reiniciar
+      document.getElementById("btn-reiniciar").addEventListener("click", () => {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
