@@ -629,13 +629,7 @@ async function executarFechamentoBatalha(event) {
 btnBatalhar.addEventListener("click", renderAreaBatalha);
 btnCalcular.addEventListener("click", executarFechamentoBatalha, true);
 
-// ================================
-<<<<<<< HEAD
-// Feedback visual no botão
-=======
 // Efeito visual simples
->>>>>>> 6335d97232b010fe515586fa346b30a8cca2cae0
-// ================================
 
 function aplicarEfeitoBotao() {
   btnCalcular.style.backgroundColor = "#ffcb05";
