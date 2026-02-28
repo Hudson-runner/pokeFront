@@ -628,3 +628,22 @@ async function executarFechamentoBatalha(event) {
 
 btnBatalhar.addEventListener("click", renderAreaBatalha);
 btnCalcular.addEventListener("click", executarFechamentoBatalha, true);
+
+// ================================
+// Feedback visual no botão
+// ================================
+
+function aplicarEfeitoBotao() {
+  btnCalcular.style.backgroundColor = "#ffcb05";
+  btnCalcular.style.color = "#000";
+  btnCalcular.style.transform = "scale(1.05)";
+  btnCalcular.style.transition = "0.3s ease";
+
+  setTimeout(() => {
+    btnCalcular.style.backgroundColor = "";
+    btnCalcular.style.color = "";
+    btnCalcular.style.transform = "";
+  }, 1000);
+}
+
+btnCalcular.addEventListener("click", aplicarEfeitoBotao);
