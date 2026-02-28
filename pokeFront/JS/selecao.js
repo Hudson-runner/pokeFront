@@ -552,7 +552,7 @@ function mostrarTelaResultado() {
   telas.resultado.style.display = "block";
 }
 
-function destacarResultado(vencedor) {
+function destacarResultado(vencedor){
   telaResultado.classList.remove(
     "resultado--vitoria-j1",
     "resultado--vitoria-j2",
@@ -628,3 +628,22 @@ async function executarFechamentoBatalha(event) {
 
 btnBatalhar.addEventListener("click", renderAreaBatalha);
 btnCalcular.addEventListener("click", executarFechamentoBatalha, true);
+
+// ================================
+// Efeito visual simples
+// ================================
+
+function aplicarEfeitoBotao() {
+  btnCalcular.style.backgroundColor = "#ffcb05";
+  btnCalcular.style.color = "#000";
+  btnCalcular.style.transform = "scale(1.05)";
+  btnCalcular.style.transition = "0.3s ease";
+
+  setTimeout(() => {
+    btnCalcular.style.backgroundColor = "";
+    btnCalcular.style.color = "";
+    btnCalcular.style.transform = "";
+  }, 1000);
+}
+
+btnCalcular.addEventListener("click", aplicarEfeitoBotao);
